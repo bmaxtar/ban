@@ -1,0 +1,52 @@
+<ion-content>
+  <div class="logo-box">
+    <img src="../../assets/icons/logo.png" alt="banebus-logo" />
+  </div>
+</ion-content>
+<ion-content>
+  <div class="title-home">
+    <a>Bienvenue</a>
+  </div>
+  <div class="subtitle-home">
+    <a color="secondary">Déplacez-vous sûrement !</a>
+  </div>
+</ion-content>
+<ion-footer class="ion-no-border">
+  <ion-row class="signin-row">
+    <ion-list lines="full">
+      <ion-item-group class="ion-margin-horizontal ion-margin-bottom">
+        <form [formGroup]="form">
+          <!-- email field -->
+          <div class="ion-margin-vertical">
+            <ion-item color="white">
+              <ion-input
+                formControlName="phone"
+                placeholder="+221766668877"
+                type="number"
+              >
+              </ion-input>
+            </ion-item>
+          </div>
+          <ion-button
+            (click)="onSubmit()"
+            *ngIf="!showSpinnerDot"
+            expand="block"
+            color="primary"
+          >
+            Connexion
+          </ion-button>
+          <ion-button *ngIf="showSpinnerDot" expand="block" color="primary">
+            <ion-spinner name="dots" color="light"></ion-spinner>
+          </ion-button>
+          <fieldset>
+            <legend>OU</legend>
+          </fieldset>
+          <ion-grid class="other-login">
+            <ion-icon name="logo-google"></ion-icon>
+            <ion-icon name="logo-apple"></ion-icon>
+          </ion-grid>
+        </form>
+      </ion-item-group>
+    </ion-list>
+  </ion-row>
+</ion-footer>

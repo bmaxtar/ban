@@ -1,0 +1,8 @@
+{
+  "name": "banebus",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone",
+  "id": "90d665b1"
+}
